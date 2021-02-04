@@ -1,0 +1,5 @@
+com\mall\filter\AuthorizeFilter.class
+com\mall\filter\UrlFilter.class
+com\mall\GatewayWebApplication$1.class
+com\mall\GatewayWebApplication.class
+com\mall\util\JwtUtil.class

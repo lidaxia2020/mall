@@ -1,0 +1,16 @@
+com\mall\goods\pojo\Album.class
+com\mall\goods\pojo\Brand.class
+com\mall\goods\pojo\Spu.class
+com\mall\goods\feign\SkuFeign.class
+com\mall\goods\feign\SpuFeign.class
+com\mall\goods\pojo\Pref.class
+com\mall\goods\pojo\StockBack.class
+com\mall\goods\pojo\Category.class
+com\mall\goods\pojo\Goods.class
+com\mall\goods\pojo\Para.class
+com\mall\goods\pojo\Spec.class
+com\mall\goods\pojo\CategoryBrand.class
+com\mall\goods\pojo\Sku.class
+com\mall\goods\feign\CategoryFeign.class
+com\mall\goods\pojo\Template.class
+com\mall\goods\pojo\UndoLog.class

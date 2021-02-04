@@ -1,0 +1,6 @@
+com\mall\search\dao\SkuEsMapper.class
+com\mall\SearchApplication.class
+com\mall\search\controller\SkuController.class
+com\mall\search\service\SkuService.class
+com\mall\search\service\SearchResultMapperImpl.class
+com\mall\search\service\impl\SkuServiceImpl.class

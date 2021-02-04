@@ -1,0 +1,4 @@
+com\mall\FileApplication.class
+com\mall\file\controller\FileController.class
+com\mall\file\FastDFSFile.class
+com\mall\util\FastDFSClient.class

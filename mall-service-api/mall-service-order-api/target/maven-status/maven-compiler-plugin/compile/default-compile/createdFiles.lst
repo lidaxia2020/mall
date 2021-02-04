@@ -1,0 +1,10 @@
+com\mall\order\pojo\OrderItem.class
+com\mall\order\pojo\Preferential.class
+com\mall\order\pojo\OrderConfig.class
+com\mall\order\pojo\ReturnCause.class
+com\mall\order\pojo\OrderLog.class
+com\mall\order\pojo\ReturnOrder.class
+com\mall\order\pojo\UndoLog.class
+com\mall\order\pojo\CategoryReport.class
+com\mall\order\pojo\Order.class
+com\mall\order\pojo\ReturnOrderItem.class

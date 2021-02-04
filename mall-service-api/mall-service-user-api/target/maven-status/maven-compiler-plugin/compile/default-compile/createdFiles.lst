@@ -1,0 +1,8 @@
+com\mall\user\feign\UserFeign.class
+com\mall\user\pojo\Address.class
+com\mall\user\pojo\Cities.class
+com\mall\user\pojo\User.class
+com\mall\user\pojo\UndoLog.class
+com\mall\user\pojo\Areas.class
+com\mall\user\pojo\OauthClientDetails.class
+com\mall\user\pojo\Provinces.class

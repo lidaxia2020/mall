@@ -1,0 +1,4 @@
+com\mall\item\service\impl\PageServiceImpl.class
+com\mall\item\service\PageService.class
+com\mall\ItemApplication.class
+com\mall\item\controller\PageController.class
