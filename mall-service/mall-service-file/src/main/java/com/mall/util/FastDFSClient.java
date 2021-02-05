@@ -10,14 +10,6 @@ import java.io.ByteArrayInputStream;
 import java.io.IOException;
 import java.io.InputStream;
 
-/**
- * 描述
- *
- * @author 三国的包子
- * @version 1.0
- * @package com.changgou.util *
- * @since 1.0
- */
 public class FastDFSClient {
 
     static {
@@ -146,7 +138,7 @@ public class FastDFSClient {
 
 
     //根据文件名和组名 获取组信息的数组信息
-    public static ServerInfo[] getServerInfo(String groupName, String remoteFileName){
+    public static ServerInfo[] getServerInfo(String groupName, String remoteFileName) {
         try {
             //3.创建trackerclient对象
             TrackerClient trackerClient = new TrackerClient();
@@ -164,7 +156,7 @@ public class FastDFSClient {
 
     //获取tracker 的ip和端口的信息
     //http://192.168.211.132:8080
-    public static String getTrackerUrl(){
+    public static String getTrackerUrl() {
         try {
             //3.创建trackerclient对象
             TrackerClient trackerClient = new TrackerClient();

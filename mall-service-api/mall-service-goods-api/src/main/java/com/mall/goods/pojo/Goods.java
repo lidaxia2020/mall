@@ -1,33 +1,13 @@
 package com.mall.goods.pojo;
 
+import lombok.Data;
+
 import java.io.Serializable;
 import java.util.List;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.goods.pojo *
- * @since 1.0
- */
+@Data
 public class Goods implements Serializable {
     private Spu spu;
     private List<Sku> skuList;
 
-    public Spu getSpu() {
-        return spu;
-    }
-
-    public void setSpu(Spu spu) {
-        this.spu = spu;
-    }
-
-    public List<Sku> getSkuList() {
-        return skuList;
-    }
-
-    public void setSkuList(List<Sku> skuList) {
-        this.skuList = skuList;
-    }
 }

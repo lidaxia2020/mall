@@ -1,13 +1,15 @@
 package entity;
 
 import com.alibaba.fastjson.annotation.JSONField;
+import lombok.Data;
 
 import java.io.Serializable;
 
-/*****
- * @Author: www.itheima.com
- * @Description: entity:MQ消息封装
- ****/
+
+/**
+ * entity:MQ消息封装
+ */
+@Data
 public class Message implements Serializable{
 
     //执行的操作  1：增加，2：修改,3：删除
@@ -39,35 +41,4 @@ public class Message implements Serializable{
         this.exechange = exechange;
     }
 
-    public String getRoutekey() {
-        return routekey;
-    }
-
-    public void setRoutekey(String routekey) {
-        this.routekey = routekey;
-    }
-
-    public String getExechange() {
-        return exechange;
-    }
-
-    public void setExechange(String exechange) {
-        this.exechange = exechange;
-    }
-
-    public int getCode() {
-        return code;
-    }
-
-    public void setCode(int code) {
-        this.code = code;
-    }
-
-    public Object getContent() {
-        return content;
-    }
-
-    public void setContent(Object content) {
-        this.content = content;
-    }
 }

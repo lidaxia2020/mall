@@ -8,11 +8,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.web.client.RestTemplate;
 import tk.mybatis.spring.annotation.MapperScan;
 
-/*****
- * @Author: www.itheima
- * @Date: 2019/7/6 8:01
- * @Description: com.changgou
- ****/
 @SpringBootApplication
 @EnableDiscoveryClient
 @MapperScan(basePackages = "com.mall.auth.dao")
@@ -20,7 +15,7 @@ import tk.mybatis.spring.annotation.MapperScan;
 public class OAuthApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(OAuthApplication.class,args);
+        SpringApplication.run(OAuthApplication.class, args);
     }
 
 

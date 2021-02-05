@@ -73,6 +73,13 @@
         <!--
             http://localhost:9011/swagger-ui.html
         -->
+        <!--使用 lombok 简化 Java 代码-->
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+            <version>1.18.10</version>
+            <scope>compile</scope>
+        </dependency>
     </dependencies>
 
     <!--springcloud的版本控制-->

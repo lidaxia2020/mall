@@ -1,14 +1,12 @@
 package com.mall.content.pojo;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
-/****
- * @Author:admin
- * @Description:Content构建
- * @Date 2019/6/14 19:13
- *****/
 @Table(name="tb_content")
+@Data
 public class Content implements Serializable{
 
 	@Id
@@ -35,70 +33,6 @@ public class Content implements Serializable{
 	private Integer sortOrder;//排序
 
 
-
-	//get方法
-	public Long getId() {
-		return id;
-	}
-
-	//set方法
-	public void setId(Long id) {
-		this.id = id;
-	}
-	//get方法
-	public Long getCategoryId() {
-		return categoryId;
-	}
-
-	//set方法
-	public void setCategoryId(Long categoryId) {
-		this.categoryId = categoryId;
-	}
-	//get方法
-	public String getTitle() {
-		return title;
-	}
-
-	//set方法
-	public void setTitle(String title) {
-		this.title = title;
-	}
-	//get方法
-	public String getUrl() {
-		return url;
-	}
-
-	//set方法
-	public void setUrl(String url) {
-		this.url = url;
-	}
-	//get方法
-	public String getPic() {
-		return pic;
-	}
-
-	//set方法
-	public void setPic(String pic) {
-		this.pic = pic;
-	}
-	//get方法
-	public String getStatus() {
-		return status;
-	}
-
-	//set方法
-	public void setStatus(String status) {
-		this.status = status;
-	}
-	//get方法
-	public Integer getSortOrder() {
-		return sortOrder;
-	}
-
-	//set方法
-	public void setSortOrder(Integer sortOrder) {
-		this.sortOrder = sortOrder;
-	}
 
 
 }

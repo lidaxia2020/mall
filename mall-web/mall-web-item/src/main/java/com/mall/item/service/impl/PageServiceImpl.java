@@ -20,14 +20,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.item.service.impl *
- * @since 1.0
- */
 @Service
 public class PageServiceImpl implements PageService {
     @Autowired
@@ -48,32 +40,33 @@ public class PageServiceImpl implements PageService {
 
     /**
      * 构建数据模型
+     *
      * @param spuId
      * @return
      */
-    private Map<String,Object> buildDataModel(Long spuId){
+    private Map<String, Object> buildDataModel(Long spuId) {
         //构建数据模型
-        Map<String,Object> dataMap = new HashMap<>();
+        Map<String, Object> dataMap = new HashMap<>();
         //获取spu 和SKU列表
         Result<Spu> result = spuFeign.findById(spuId);
         Spu spu = result.getData();
 
         //获取分类信息
-        dataMap.put("category1",categoryFeign.findById(spu.getCategory1Id()).getData());
-        dataMap.put("category2",categoryFeign.findById(spu.getCategory2Id()).getData());
-        dataMap.put("category3",categoryFeign.findById(spu.getCategory3Id()).getData());
-        if(spu.getImages()!=null) {
+        dataMap.put("category1", categoryFeign.findById(spu.getCategory1Id()).getData());
+        dataMap.put("category2", categoryFeign.findById(spu.getCategory2Id()).getData());
+        dataMap.put("category3", categoryFeign.findById(spu.getCategory3Id()).getData());
+        if (spu.getImages() != null) {
             dataMap.put("imageList", spu.getImages().split(","));
         }
 
-        dataMap.put("specificationList", JSON.parseObject(spu.getSpecItems(),Map.class));
-        dataMap.put("spu",spu);
+        dataMap.put("specificationList", JSON.parseObject(spu.getSpecItems(), Map.class));
+        dataMap.put("spu", spu);
 
         //根据spuId查询Sku集合
         Sku skuCondition = new Sku();
         skuCondition.setSpuId(spu.getId());
         Result<List<Sku>> resultSku = skuFeign.findList(skuCondition);
-        dataMap.put("skuList",resultSku.getData());
+        dataMap.put("skuList", resultSku.getData());
         return dataMap;
     }
 

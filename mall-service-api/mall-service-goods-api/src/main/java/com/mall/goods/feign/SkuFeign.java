@@ -3,20 +3,11 @@ package com.mall.goods.feign;
 import com.mall.goods.pojo.Sku;
 import com.mall.order.pojo.OrderItem;
 import entity.Result;
-import entity.StatusCode;
 import org.springframework.cloud.openfeign.FeignClient;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.goods.feign *
- * @since 1.0
- */
 @FeignClient(value = "goods")
 @RequestMapping("/sku")
 public interface SkuFeign {

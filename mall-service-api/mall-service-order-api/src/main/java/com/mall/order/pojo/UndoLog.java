@@ -1,4 +1,4 @@
-package com.mall.goods.pojo;
+package com.mall.order.pojo;
 
 import lombok.Data;
 
@@ -35,5 +35,7 @@ public class UndoLog implements Serializable{
 
     @Column(name = "ext")
 	private String ext;//
+
+
 
 }

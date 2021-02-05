@@ -1,13 +1,11 @@
 package com.mall.goods.pojo;
 
+import lombok.Data;
+
 import javax.persistence.*;
 import java.io.Serializable;
 
-/****
- * @Author:admin
- * @Description:Spec构建
- * @Date 2019/6/14 19:13
- *****/
+@Data
 @Table(name="tb_spec")
 public class Spec implements Serializable{
 
@@ -28,53 +26,6 @@ public class Spec implements Serializable{
     @Column(name = "template_id")
 	private Integer templateId;//模板ID
 
-
-
-	//get方法
-	public Integer getId() {
-		return id;
-	}
-
-	//set方法
-	public void setId(Integer id) {
-		this.id = id;
-	}
-	//get方法
-	public String getName() {
-		return name;
-	}
-
-	//set方法
-	public void setName(String name) {
-		this.name = name;
-	}
-	//get方法
-	public String getOptions() {
-		return options;
-	}
-
-	//set方法
-	public void setOptions(String options) {
-		this.options = options;
-	}
-	//get方法
-	public Integer getSeq() {
-		return seq;
-	}
-
-	//set方法
-	public void setSeq(Integer seq) {
-		this.seq = seq;
-	}
-	//get方法
-	public Integer getTemplateId() {
-		return templateId;
-	}
-
-	//set方法
-	public void setTemplateId(Integer templateId) {
-		this.templateId = templateId;
-	}
 
 
 }

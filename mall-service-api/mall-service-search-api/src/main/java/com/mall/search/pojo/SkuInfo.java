@@ -1,5 +1,6 @@
 package com.mall.search.pojo;
 
+import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.elasticsearch.annotations.Document;
 import org.springframework.data.elasticsearch.annotations.Field;
@@ -15,9 +16,6 @@ import java.util.Map;
  * 3.创建文档 ()
  * 4.字段的映射(是否分词 是否索引 是否存储  数据类型是什么 分词器是什么)
  *
- * @author www.itheima.com
- * @version 1.0
- * @Document(indexName = "skuinfo",type = "docs")
  * indexName 指定创建的索引的名称
  * type :指定索引中的类型
  * @package PACKAGE_NAME *
@@ -25,6 +23,7 @@ import java.util.Map;
  */
 
 @Document(indexName = "skuinfo", type = "docs")
+@Data
 public class SkuInfo implements Serializable {
 
 
@@ -88,124 +87,4 @@ public class SkuInfo implements Serializable {
     //@Field(type = FieldType.Object)
     private Map<String, Object> specMap;
 
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public Long getPrice() {
-        return price;
-    }
-
-    public void setPrice(Long price) {
-        this.price = price;
-    }
-
-    public Integer getNum() {
-        return num;
-    }
-
-    public void setNum(Integer num) {
-        this.num = num;
-    }
-
-    public String getImage() {
-        return image;
-    }
-
-    public void setImage(String image) {
-        this.image = image;
-    }
-
-    public String getStatus() {
-        return status;
-    }
-
-    public void setStatus(String status) {
-        this.status = status;
-    }
-
-    public Date getCreateTime() {
-        return createTime;
-    }
-
-    public void setCreateTime(Date createTime) {
-        this.createTime = createTime;
-    }
-
-    public Date getUpdateTime() {
-        return updateTime;
-    }
-
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
-    }
-
-    public String getIsDefault() {
-        return isDefault;
-    }
-
-    public void setIsDefault(String isDefault) {
-        this.isDefault = isDefault;
-    }
-
-    public Long getSpuId() {
-        return spuId;
-    }
-
-    public void setSpuId(Long spuId) {
-        this.spuId = spuId;
-    }
-
-    public Long getCategoryId() {
-        return categoryId;
-    }
-
-    public void setCategoryId(Long categoryId) {
-        this.categoryId = categoryId;
-    }
-
-    public String getCategoryName() {
-        return categoryName;
-    }
-
-    public void setCategoryName(String categoryName) {
-        this.categoryName = categoryName;
-    }
-
-    public String getBrandName() {
-        return brandName;
-    }
-
-    public void setBrandName(String brandName) {
-        this.brandName = brandName;
-    }
-
-    public String getSpec() {
-        return spec;
-    }
-
-    public void setSpec(String spec) {
-        this.spec = spec;
-    }
-
-    public Map<String, Object> getSpecMap() {
-        return specMap;
-    }
-
-    public void setSpecMap(Map<String, Object> specMap) {
-        this.specMap = specMap;
-    }
 }

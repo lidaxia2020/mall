@@ -17,12 +17,13 @@ public class PageController {
 
     /**
      * 生成静态页面
+     *
      * @param id SPU的ID
      * @return
      */
     @RequestMapping("/createHtml/{id}")
-    public Result createHtml(@PathVariable(name="id") Long id){
+    public Result createHtml(@PathVariable(name = "id") Long id) {
         pageService.createPageHtml(id);
-        return new Result(true, StatusCode.OK,"ok");
+        return new Result(true, StatusCode.OK, "ok");
     }
 }

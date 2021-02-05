@@ -9,24 +9,16 @@ import org.springframework.http.server.reactive.ServerHttpRequest;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou *
- * @since 1.0
- */
 @SpringBootApplication
 @EnableEurekaClient
 public class GatewayWebApplication {
     public static void main(String[] args) {
-        SpringApplication.run(GatewayWebApplication.class,args);
+        SpringApplication.run(GatewayWebApplication.class, args);
     }
 
     //创建一个ipKeyResolver 指定用户的IP
-    @Bean(name="ipKeyResolver")
-    public KeyResolver keyResolver(){
+    @Bean(name = "ipKeyResolver")
+    public KeyResolver keyResolver() {
         return new KeyResolver() {
             @Override
             public Mono<String> resolve(ServerWebExchange exchange) {

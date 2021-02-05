@@ -1,4 +1,5 @@
 package com.mall.oauth.config;
+
 import com.mall.oauth.util.UserJwt;
 import com.mall.user.feign.UserFeign;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,8 +28,8 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     @Autowired
     ClientDetailsService clientDetailsService;
 
-   @Autowired
-   private UserFeign userFeign;
+    @Autowired
+    private UserFeign userFeign;
 
     /****
      * 自定义授权认证
@@ -41,15 +42,15 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         //取出身份，如果身份为空说明没有认证
         Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
         //没有认证统一采用httpbasic认证，httpbasic中存储了client_id和client_secret，开始认证client_id和client_secret
-        if(authentication==null){
+        if (authentication == null) {
             ClientDetails clientDetails = clientDetailsService.loadClientByClientId(username);
-            if(clientDetails!=null){
+            if (clientDetails != null) {
                 //秘钥
                 String clientSecret = clientDetails.getClientSecret();
                 //静态方式
                 //return new User(username,new BCryptPasswordEncoder().encode(clientSecret), AuthorityUtils.commaSeparatedStringToAuthorityList(""));
                 //数据库查找方式
-                return new User(username,clientSecret, AuthorityUtils.commaSeparatedStringToAuthorityList(""));
+                return new User(username, clientSecret, AuthorityUtils.commaSeparatedStringToAuthorityList(""));
             }
         }
 
@@ -64,7 +65,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
         String permissions = "goods_list,seckill_list";
 
 
-        UserJwt userDetails = new UserJwt(username,pwd,AuthorityUtils.commaSeparatedStringToAuthorityList(permissions));
+        UserJwt userDetails = new UserJwt(username, pwd, AuthorityUtils.commaSeparatedStringToAuthorityList(permissions));
 
 
         //userDetails.setComy(songsi);

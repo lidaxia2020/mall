@@ -5,11 +5,6 @@ import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
-/****
- * @Author:admin
- * @Description:Content业务层接口
- * @Date 2019/6/14 0:16
- *****/
 public interface ContentService {
 
     /***
@@ -56,10 +51,11 @@ public interface ContentService {
 
     /**
      * 根据ID查询Content
+     *
      * @param id
      * @return
      */
-     Content findById(Long id);
+    Content findById(Long id);
 
     /***
      * 查询所有Content

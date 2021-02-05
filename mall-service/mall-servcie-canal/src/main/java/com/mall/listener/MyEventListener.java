@@ -13,15 +13,10 @@ import sun.rmi.runtime.Log;
 
 import java.util.List;
 
+
 /**
- * 监听类 监听数据的变化做处理
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.listener *
- * @since 1.0
+ * 事件监听的注解 监听数据库的变
  */
-// 事件监听的注解 监听数据库的变化
 @CanalEventListener
 public class MyEventListener {
 

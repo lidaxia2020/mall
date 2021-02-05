@@ -15,14 +15,6 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 import javax.servlet.http.HttpServletResponse;
 import java.util.Map;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.oauth.controller *
- * @since 1.0
- */
 @RestController
 @RequestMapping("/user")
 public class UserLoginController {
@@ -36,13 +28,17 @@ public class UserLoginController {
     @Value("${auth.clientSecret}")
     private String clientSecret;
 
-    private static final String GRAND_TYPE = "password";//授权模式 密码模式
-
+    /**
+     * 授权模式 密码模式
+     */
+    private static final String GRAND_TYPE = "password";
 
     @Value("${auth.cookieDomain}")
     private String cookieDomain;
 
-    //Cookie生命周期
+    /**
+     * Cookie生命周期
+     */
     @Value("${auth.cookieMaxAge}")
     private int cookieMaxAge;
 

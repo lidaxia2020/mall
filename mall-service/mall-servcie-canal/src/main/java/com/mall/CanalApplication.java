@@ -9,20 +9,15 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * canal的客户端 目的:监听服务端的数据的变化
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou *
- * @since 1.0
  */
 @SpringBootApplication(exclude = DataSourceAutoConfiguration.class)
 @EnableEurekaClient
 //启用canal
 @EnableCanalClient
-@EnableFeignClients(basePackages = {"com.mall.content.feign","com.mall.item.feign"})
+@EnableFeignClients(basePackages = {"com.mall.content.feign", "com.mall.item.feign"})
 public class CanalApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(CanalApplication.class,args);
+        SpringApplication.run(CanalApplication.class, args);
     }
 }

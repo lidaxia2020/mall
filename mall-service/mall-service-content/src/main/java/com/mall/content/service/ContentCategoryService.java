@@ -5,11 +5,6 @@ import com.github.pagehelper.PageInfo;
 
 import java.util.List;
 
-/****
- * @Author:admin
- * @Description:ContentCategory业务层接口
- * @Date 2019/6/14 0:16
- *****/
 public interface ContentCategoryService {
 
     /***
@@ -56,10 +51,11 @@ public interface ContentCategoryService {
 
     /**
      * 根据ID查询ContentCategory
+     *
      * @param id
      * @return
      */
-     ContentCategory findById(Long id);
+    ContentCategory findById(Long id);
 
     /***
      * 查询所有ContentCategory

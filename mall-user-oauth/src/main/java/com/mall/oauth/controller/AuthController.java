@@ -16,28 +16,31 @@ import org.springframework.web.context.request.ServletRequestAttributes;
 
 import javax.servlet.http.HttpServletResponse;
 
-/*****
- * @Author: www.itheima
- * @Date: 2019/7/7 16:42
- * @Description: com.changgou.oauth.controller
- ****/
 @RestController
 @RequestMapping(value = "/userx")
 public class AuthController {
 
-    //客户端ID
+    /**
+     * 客户端ID
+     */
     @Value("${auth.clientId}")
     private String clientId;
 
-    //秘钥
+    /**
+     * 秘钥
+     */
     @Value("${auth.clientSecret}")
     private String clientSecret;
 
-    //Cookie存储的域名
+    /**
+     * Cookie存储的域名
+     */
     @Value("${auth.cookieDomain}")
     private String cookieDomain;
 
-    //Cookie生命周期
+    /**
+     * Cookie生命周期
+     */
     @Value("${auth.cookieMaxAge}")
     private int cookieMaxAge;
 

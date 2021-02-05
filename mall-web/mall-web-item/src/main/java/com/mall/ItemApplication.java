@@ -10,6 +10,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 @EnableFeignClients(basePackages = "com.mall.goods.feign")
 public class ItemApplication {
     public static void main(String[] args) {
-        SpringApplication.run(ItemApplication.class,args);
+        SpringApplication.run(ItemApplication.class, args);
     }
 }
