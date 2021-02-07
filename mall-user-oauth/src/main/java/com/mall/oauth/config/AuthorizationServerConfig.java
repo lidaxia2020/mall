@@ -44,7 +44,7 @@ class AuthorizationServerConfig extends AuthorizationServerConfigurerAdapter {
      * SpringSecurity 用户自定义授权认证类
      */
     @Autowired
-    UserDetailsService userDetailsService;
+    private UserDetailsService userDetailsService;
 
     /**
      * 授权认证管理器

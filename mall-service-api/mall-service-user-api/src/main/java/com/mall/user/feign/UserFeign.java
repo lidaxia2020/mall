@@ -8,19 +8,12 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.user.feign *
- * @since 1.0
- */
 @FeignClient(name="user")
 @RequestMapping("/user")
 public interface UserFeign {
+
     @GetMapping("/load/{id}")
-    public Result<User> findByUsername(@PathVariable(name="id") String id);
+    Result<User> findByUsername(@PathVariable(name="id") String id);
 
 
     /**
@@ -30,7 +23,7 @@ public interface UserFeign {
      * @return
      */
     @GetMapping(value = "/points/add")
-    public Result addPoints(@RequestParam(value="points") Integer points
+    Result addPoints(@RequestParam(value="points") Integer points
             ,@RequestParam(value="username") String username );
 
 

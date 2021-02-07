@@ -58,11 +58,11 @@ public class UserLoginController {
 
         //设置到cookie中
         saveCookie(authToken.getAccessToken());
-        return new Result<>(true, StatusCode.OK,"令牌生成成功",authToken);
+        return new Result<>(true, StatusCode.OK, "令牌生成成功", authToken);
     }
 
-    private void saveCookie(String token){
+    private void saveCookie(String token) {
         HttpServletResponse response = ((ServletRequestAttributes) RequestContextHolder.getRequestAttributes()).getResponse();
-        CookieUtil.addCookie(response,cookieDomain,"/","Authorization",token,cookieMaxAge,false);
+        CookieUtil.addCookie(response, cookieDomain, "/", "Authorization", token, cookieMaxAge, false);
     }
 }

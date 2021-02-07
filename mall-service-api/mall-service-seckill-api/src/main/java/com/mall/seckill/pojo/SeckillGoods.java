@@ -4,11 +4,6 @@ import javax.persistence.*;
 import java.io.Serializable;
 import java.util.Date;
 
-/****
- * @Author:admin
- * @Description:SeckillGoods构建
- * @Date 2019/6/14 19:13
- *****/
 @Table(name="tb_seckill_goods")
 public class SeckillGoods implements Serializable{
 

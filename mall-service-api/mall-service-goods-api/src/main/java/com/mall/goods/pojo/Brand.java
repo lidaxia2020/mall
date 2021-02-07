@@ -1,6 +1,6 @@
 package com.mall.goods.pojo;
 
-import lombok.Data;
+import lombok.*;
 
 import javax.persistence.*;
 import java.io.Serializable;

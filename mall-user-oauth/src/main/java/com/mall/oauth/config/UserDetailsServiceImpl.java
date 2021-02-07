@@ -73,7 +73,7 @@ public class UserDetailsServiceImpl implements UserDetailsService {
     }
 
     public static void main(String[] args) {
-        String zhangsan = new BCryptPasswordEncoder().encode("zhangsan");
+        String zhangsan = new BCryptPasswordEncoder().encode("123456");
         System.out.println(zhangsan);
     }
 }

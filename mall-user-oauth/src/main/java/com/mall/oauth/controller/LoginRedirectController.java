@@ -10,7 +10,7 @@ public class LoginRedirectController {
 
     @RequestMapping("/login")
     public String login(String From, Model model) {
-        model.addAttribute("from",From);
+        model.addAttribute("from", From);
         return "login";
     }
 

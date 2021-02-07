@@ -17,14 +17,7 @@ import java.io.IOException;
 import java.io.InputStreamReader;
 import java.util.stream.Collectors;
 
-/**
- * 描述
- *
- * @author www.itheima.com
- * @version 1.0
- * @package com.changgou.user.config *
- * @since 1.0
- */
+
 @Configuration
 // 开启 资源服务器(标识他是一个oauth2中的资源服务器)
 @EnableResourceServer

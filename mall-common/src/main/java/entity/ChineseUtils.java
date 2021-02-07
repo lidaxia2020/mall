@@ -1,15 +1,8 @@
 package entity;
 
 import java.io.UnsupportedEncodingException;
-import java.util.Date;
 import java.util.Random;
 
-/***
- *
- * @Author:www.itheima.com
- * @Description:itheima
- *
- ****/
 public class ChineseUtils {
 
     private static Random random = null;

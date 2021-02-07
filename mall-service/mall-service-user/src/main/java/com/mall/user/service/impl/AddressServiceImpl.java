@@ -5,22 +5,17 @@ import com.mall.user.pojo.Address;
 import com.mall.user.service.AddressService;
 import com.github.pagehelper.PageHelper;
 import com.github.pagehelper.PageInfo;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 import tk.mybatis.mapper.entity.Example;
 
+import javax.annotation.Resource;
 import java.util.List;
 
-/****
- * @Author:admin
- * @Description:Address业务层接口实现类
- * @Date 2019/6/14 0:16
- *****/
 @Service
 public class AddressServiceImpl implements AddressService {
 
-    @Autowired
+    @Resource
     private AddressMapper addressMapper;
 
 
